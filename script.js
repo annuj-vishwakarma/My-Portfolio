@@ -39,5 +39,5 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("main-content").style.display = "block";
     }, 10000); // 10000 milliseconds = 10 seconds
 });
-
+alert("hello")
 alert("This site is under Progress!!! Please open in your window/laptop")
