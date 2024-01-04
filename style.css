@@ -1,0 +1,396 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Gilroy;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+    /* body {
+        margin: 0;
+        overflow: hidden;
+    } */
+    
+    #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        /* Set your background color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    #loader-video {
+        width: 30%;
+        height: 30%;
+    }
+    
+    .nav {
+        height: 1wh;
+        width: 100%;
+        /* background-color: rgb(2, 2, 2); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1vh;
+    }
+    
+    .nav h1 {
+        font-style: italic;
+        color: rgb(203, 201, 201);
+        margin-left: 1.2vw;
+        font-weight: 400;
+    }
+    
+    .nav button {
+        padding: 5px 15px;
+        border-radius: 20px;
+        margin-right: 1.2vw;
+        border: transparent;
+    }
+    
+    body.dark-mode .nav button {
+        background-color: #e9e5e55e;
+    }
+    
+    body.dark-mode .nav button i {
+        color: #ddd;
+    }
+    
+    body.dark-mode {
+        background-color: #222;
+        color: #F0F0F0;
+    }
+    
+    body.dark-mode nav {
+        background-color: #444;
+    }
+    
+    body.dark-mode nav a {
+        color: #ddd;
+        background-color: #333;
+    }
+    
+    body.dark-mode .secondpage {
+        color: #ddd;
+        background-color: #222222;
+    }
+    
+    body.dark-mode .secondpage .center2 {
+        color: #ddd;
+        background-color: #222222;
+    }
+    
+    body.dark-mode .secondpage .center2 .op1:hover {
+        color: #222222;
+        background-color: #6B6969;
+        border-bottom: solid 5px rgba(255, 255, 255, 0.634);
+    }
+    
+    body.dark-mode .circle h4 {
+        padding: 10px 20px;
+        border: 1px solid rgb(243, 241, 241);
+        border-radius: 50px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        transition: all ease 0.4s;
+        position: relative;
+        font-size: 18px;
+        margin-right: 20px;
+        overflow: hidden;
+    }
+    
+    body.dark-mode .circle h4 {
+        color: #ddd;
+        /* background-color: #ddd; */
+    }
+    
+    body.dark-mode .circle h4::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(247, 247, 247);
+        left: 0;
+        bottom: -100%;
+        border-radius: 50%;
+        transition: all ease 0.4s;
+    }
+    
+    body.dark-mode .circle h4:hover::after {
+        bottom: 0;
+        border-radius: 0;
+    }
+    
+    body.dark-mode .circle h4:hover::after {
+        bottom: 0;
+        border-radius: 0;
+    }
+    
+    body.dark-mode .circle h4 a {
+        color: #ddd;
+        /* border: 1px solid white; */
+    }
+    
+    body.dark-mode .circle h4:hover a {
+        color: rgb(19, 19, 19);
+    }
+    
+    .main {
+        position: relative;
+        padding: auto;
+        width: 100%;
+        height: 92%;
+        /* position: fixed; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .content {
+        /* background-color: pink; */
+        height: 100%;
+        width: 50%;
+    }
+    
+    .image {
+        width: 100%;
+        height: 40%;
+    }
+    
+    .image video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .circle {
+        width: 100%;
+        height: 10%;
+        /* background-color: rgb(255, 255, 255); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .circle .gola {
+        margin-left: 50px;
+        margin-top: -10%;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 4px solid white;
+        /* background-color: #fff; */
+    }
+    
+    .circle .gola {
+        background-image: url(WhatsApp\ Image\ 2024-01-03\ at\ 14.48.20_e87711ab.jpg);
+        background-size: 180%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .circle h4 {
+        padding: 10px 20px;
+        border: 1px solid black;
+        border-radius: 50px;
+        font-weight: 500;
+        color: black;
+        transition: all ease 0.4s;
+        position: relative;
+        font-size: 18px;
+        margin-right: 20px;
+        overflow: hidden;
+    }
+    
+    .circle h4::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        left: 0;
+        bottom: -100%;
+        border-radius: 50%;
+        transition: all ease 0.4s;
+    }
+    
+    .links .icons i {
+        padding: 2px;
+    }
+    
+    .circle h4:hover::after {
+        bottom: 0;
+        border-radius: 0;
+    }
+    
+    .circle h4 a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        position: relative;
+        z-index: 9;
+    }
+    
+    .circle h4:hover a {
+        color: rgb(255, 255, 255);
+    }
+    
+    .info {
+        height: 30%;
+        width: 100%;
+        /* background-color: pink; */
+        padding: 0px 30px;
+        margin-top: -8%;
+    }
+    
+    .info #information {
+        width: 100%;
+        height: 100%;
+        margin-top: 10%;
+        /* background-color: black; */
+    }
+    
+    .info #information h4 {
+        padding: 5px;
+        /* color: #fff; */
+        font-weight: 300;
+    }
+    
+    .info #information #profile {
+        margin: 0px, 20px;
+    }
+    
+    .info #information .links {
+        margin-top: 10px;
+        width: 100%;
+        height: 20%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .info #information .links .icons {
+        width: 130px;
+        height: 100%;
+        /* background-color: #fff; */
+    }
+    
+    .email {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: 25%;
+        background-color: #CBCCD6;
+        border-radius: 30px;
+        margin-top: 10px;
+        margin-left: 55px;
+        overflow: hidden;
+    }
+    
+    .email .left {
+        background-color: #F0F0F0;
+        width: 80%;
+        height: 100%;
+        border: none;
+        /* background-color: aqua; */
+    }
+    
+    .email .left input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background-color: #F0F0F0;
+        margin-left: 20px;
+        /* border-radius: 30px; */
+    }
+    
+    .email .right button {
+        width: 100%;
+        height: 100%;
+        border-right: none;
+        margin-right: 25px;
+        border-left: solid red 2px;
+        font-size: 15px;
+        padding: 20px 40px;
+        border-left: solid 2px black;
+        transition: all ease 0.4s;
+    }
+    
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 10%;
+        font-size: 10px;
+        /* background-color: black; */
+        margin-top: 40px;
+    }
+    
+    .text h1 {
+        padding: 5px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    
+    .email .right button:hover {
+        background-color: black;
+        color: #F0F0F0;
+        cursor: pointer;
+    }
+    
+    .secondpage {
+        width: 100%;
+        height: 100%;
+        background-color: #F5F5F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .secondpage .center2 {
+        height: 100%;
+        width: 50%;
+        background-color: #F5F5F5;
+    }
+    
+    .secondpage .center2 .options {
+        margin-top: 50px;
+        width: 100%;
+        height: 8vh;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .secondpage .center2 .options .op1 {
+        width: 150px;
+        height: 100%;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease 0.2s;
+    }
+    
+    .op1:hover {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(78, 73, 73, 0.508);
+        color: #F0F0F0;
+        border-bottom: solid 5px rgb(43, 42, 42);
+    }
